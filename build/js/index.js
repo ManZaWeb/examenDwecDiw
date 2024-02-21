@@ -36,9 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function mostrarImagen(id) {
     const imagen = document.createElement("picture");
     imagen.innerHTML = `
-   
-  <source srcset="build/fotos/grande/${id}.webp" type="image/webp">
-  <img loading="lazy" width="200" height="300" src="build/fotos/grande/${id}.jpg" alt="imagen galeria">
+    <img loading="lazy" width="200" height="300" src="build/fotos/grande/${id}.jpg" alt="imagen galeria">
+    <source srcset="build/fotos/grande/${id}.webp" type="image/webp">
       `;
    
     // Crea el Overlay con la imagen

@@ -4,22 +4,81 @@
     
 }
 
-/*:root{
-    color_principal: ;
-    color_secundario: ;
-    color_terciario: ;
-}*/
+:root {
+    --color-primario: #FF0000;
+    --color-secundario: #000000;
+    --color-terciario: #3D0000;
+   
+  }
 
 @font-face {
     font-family: 'Protest';
     src: url(/build/fonts/ProtestRevolution-Regular.ttf);
 }
 
-.page-header{
-    background: black;
-    color:red
+body {
+    font-family: "Protest", sans-serif;
+    font-size: 2rem;
+  }
+
+.header{
+    background: var(--color-secundario);
+    height: 4rem;
+    
+    
 }
 
-.nav{
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-primario);
+  }
+
+  .video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .video video{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, rgba(44, 62, 80, 1), rgba(189, 195, 199, 0.3));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(44, 62, 80, 1), rgba(189, 195, 199, 0.3)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+
+.page-footer{
+    position: relative;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
 }

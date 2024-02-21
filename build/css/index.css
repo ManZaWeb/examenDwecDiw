@@ -23,25 +23,25 @@ body {
 
 .header{
     background: var(--color-secundario);
-    height: 4rem;
-    
+    height: 4rem;    
     
 }
 
-.nav-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu a {
-    text-decoration: none;
+.menu{
     display: flex;
     flex-direction: row;
-    text-align: center;
+    margin-left: 10%;
+    gap: 3rem;
+    
+}
+
+.menu a {    
     color: var(--color-primario);
     font-size: 2.4rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    
   }
 
   .menu a:hover {
@@ -75,10 +75,29 @@ body {
     justify-content: center;
   }
 
+  .contenido-video h2{
+    color: var(--color-primario);
+    font-size: 6rem;
+    
+  }
+
+  .contenido-video p{
+    color: var(--color-secundario);
+    font-size: 3rem;
+  }
+
   
 
 .page-footer{
     position: relative;
     color: var(--color-primario);
     background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+}
+
+.galeria h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

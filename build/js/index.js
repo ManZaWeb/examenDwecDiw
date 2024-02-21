@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function mostrarImagen(id) {
     const imagen = document.createElement("picture");
     imagen.innerHTML = `
-    <img loading="lazy" width="200" height="300" src="build/fotos/grande/${id}.jpg" alt="imagen galeria">
     <source srcset="build/fotos/grande/${id}.webp" type="image/webp">
-      `;
+    <img loading="lazy" width="700" height="500" src="build/fotos/grande/${id}.jpg" alt="imagen galeria">
+     `;
    
     // Crea el Overlay con la imagen
     const overlay = document.createElement("DIV");

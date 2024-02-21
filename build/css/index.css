@@ -83,8 +83,10 @@ body {
   }
 
   .contenido-video p{
+    
     color: var(--color-secundario);
     font-size: 3rem;
+    
   }
 
   
@@ -97,8 +99,13 @@ body {
     justify-content: center;
 }
 
+.fijar-body{
+
+}
+
 .galeria{
     margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 100%;
     display: grid;
     justify-content: center;

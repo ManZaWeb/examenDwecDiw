@@ -1,40 +1,62 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WH40K: Horus Heresy</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="build/css/index.css">
+    <title>Horus Heresy</title>
     <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/index.css">
 </head>
-
+ 
 <body id="inicio">
-    <header class="page-header">
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="#inicio"></a>Inicio</li>
-                <li><a href="#galeria"></a>Galería</li>
-            </ul>
-        </nav>
+ 
+    <header class="header">
+       
+        <div class="contenedor page-header">
+ 
+            <span class="logo-container">
+               
+            </span>
+ 
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#galeria">Galería</a>
+            </nav>
+ 
+        </div>
+ 
     </header>
-
-    <div class="contenedor-video">
-        <div class="contenido-video">
-            <h2>Horus Heresy</h2>
-            <p>The Galaxy is Burning </p>
+ 
+    <div class="video">
+ 
+        <div class="overlay">
+ 
+            <div class="contenedor contenido-video">
+                <h2>The Horus Heresy</h2>
+                <p>Galaxy is burning.</p>
+            </div>
         </div>
-        <video src=""></video>
+ 
+        <video autoplay loop muted>
+            <source src="build/video/heresy.mp4" type="video/mp4">
+            <source src="build/video/heresy.ogg" type="video/ogg">
+            <source src="build/video/heresy.webm" type="video/webm">
+        </video>
+ 
     </div>
-
-    <section>
-        <h2>Galeria</h2>
-        <div class="contedor-galeria">
-            <ul class="imagenes"></ul>
-        </div>
+ 
+    <section id="galeria" class="galeria">
+        <h3>Galería</h3>
+        <ul class="galeria-imagenes">
+        </ul>
     </section>
-
-    <footer class="page-footer">WH40K.2024</footer>
-    
+ 
+    <footer class="page-footer">
+        <p>© WarHammer. <span id="año">2024</span></p>
+    </footer>
+ 
+    <script src="build/js/index.js"></script>
+ 
 </body>
 </html>

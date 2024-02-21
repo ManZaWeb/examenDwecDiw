@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*:root{
+    color_principal: ;
+    color_secundario: ;
+    color_terciario: ;
+}*/
+
+@font-face {
+    font-family: 'Protest';
+    src: url(/build/fonts/ProtestRevolution-Regular.ttf);
+}
+
+.page-header{
+    background: black;
+    color:red
+}
+
+.nav{
+    text-decoration: none;
+}

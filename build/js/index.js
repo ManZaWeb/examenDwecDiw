@@ -1,5 +1,5 @@
 //Autor: Mario Alfonso Nuñez
-//GitHub Link: 
+//GitHub Link: https://github.com/ManZaWeb/examenDwecDiw
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function iniciarApp() {
     
     crearGaleria();
+    
+    scrollNav();
    
   }
 
@@ -40,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <img loading="lazy" width="700" height="500" src="build/fotos/grande/${id}.jpg" alt="imagen galeria">
      `;
    
-    // Crea el Overlay con la imagen
     const overlay = document.createElement("DIV");
     overlay.appendChild(imagen);
     overlay.classList.add("overlay");
@@ -50,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.remove();
     };
    
-    // Boton para cerrar el Modal
     const cerrarModal = document.createElement("P");
     cerrarModal.textContent = "X";
     cerrarModal.classList.add("btn-cerrar");
@@ -61,13 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     overlay.appendChild(cerrarModal);
    
-    // Añadirlo al HTML
     const body = document.querySelector("body");
     body.appendChild(overlay);
     body.classList.add("fijar-body");
   }
 
-  // Funcio Modo oscuro
 document.addEventListener('DOMContentLoaded', function () {
     const modoOscuroBtn = document.getElementById('dark');
     const body = document.body;
@@ -78,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log("Botón de Modo Oscuro clickeado.");
       body.classList.toggle('modo-oscuro');
   
-      // Guarda el estado actual del modo en el almacenamiento local
       if (body.classList.contains('modo-oscuro')) {
         localStorage.setItem('modoOscuro', 'activo');
         console.log("Modo oscuro activado.");
@@ -88,4 +85,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  
+  
+  function scrollNav() {
+    const enlaces = document.querySelectorAll(".navegacion-principal a");
+  
+    
+  
+    enlaces.forEach((enlace) => {
+      enlace.addEventListener("click", function (e) {
+        
+        e.preventDefault();
+  
+       
+        const seccionScroll = e.target.attributes.href.value;
+      
+        const seccion = document.querySelector(seccionScroll);
+        
+        seccion.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  }
   
